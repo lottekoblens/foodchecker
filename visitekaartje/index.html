@@ -5,19 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://use.fontawesome.com/697798a952.js"></script>
     <title>Visitekaartje</title>
   </head>
   <body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
     <main>
+      <div id="first">
+        <img src="images/profile.jpg" id="profile"/>
       <article>
-        <h1>Lotte Koblens</h1>
-        <h3>Student CMD</h3>
-        <img src="images/grafiek.png" />
-        <button><a href="info.html">Wie ben ik?</a></button>
+        <h1><span>&#123;</span>Lotte Koblens<span>&#10101;</span></h1>
+        <h4>20 jaar, Student CMD</h4>
+        <h3 class="skills">Skills</h3>
+        <img src="images/skills.png" class="skill-img" />
+        <button id="button-animation">
+          Wie ben ik?
+        </button>
       </article>
-
-      <img src="images/profile.jpg" />
-      <!-- <button><a href="info.html">GO!</a><img src="images/board.png"></button></button> -->
+    </div>
+      <div id="hide" class="hide-div">
+        <article>
+          <p>
+            Ik ben een student CMD en heb me gespecialiseerd in de technische
+            kant, omdat ik frontend developer wil worden.
+          </p>
+          <h3>Kwaliteiten</h3>
+          <ul>
+            <li>Behulpzaam</li>
+            <li>Harde werker</li>
+            <li>Oplossingsgericht</li>
+          </ul>
+          <h3>Contact</h3>
+          <ul id="no-bullet">
+            <li>
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              lotte.koblens@hva.nl
+            </li>
+            <li><i class="fa fa-phone" aria-hidden="true"></i> 06 27 10 95 15</i></li>
+          </ul>
+          <a href="index.html">Terug</a>
+        </article>
+      </div>
     </main>
   </body>
+  <script type="text/javascript" src="./index.js"></script>
 </html>
