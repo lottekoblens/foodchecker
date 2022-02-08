@@ -9,28 +9,30 @@ body {
   align-items: baseline;
 }
 
-.bg {
-  animation: slide 4s ease-in-out infinite alternate;
+/* animation background */
+
+.background {
   background-image: linear-gradient(-60deg, #56564c 50%, #b9b09f 50%);
-  bottom: 0;
   left: -50%;
+  bottom: 0;
   opacity: 0.5;
   position: fixed;
-  right: -50%;
   top: 0;
+  right: -50%;
   z-index: -1;
+  animation: background-slide 4s ease-in-out infinite alternate;
 }
 
-.bg2 {
+.background2 {
   animation-direction: alternate-reverse;
   animation-duration: 4s;
 }
 
-.bg3 {
+.background3 {
   animation-duration: 5s;
 }
 
-@keyframes slide {
+@keyframes background-slide {
   0% {
     transform: translateX(-25%);
   }
@@ -98,6 +100,17 @@ body {
   transition: opacity 1s ease-out;
 }
 
+/* navigation */
+
+nav {
+  position: absolute;
+  left: 3%;
+}
+
+nav a img {
+  max-width: 3em;
+}
+
 /* main */
 
 main {
@@ -106,10 +119,11 @@ main {
   justify-content: center;
   padding: 1em;
   background: black;
-  background-image: url('./images/background.jpg');
+  background-image: url('./images/background-star.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-blend-mode: hard-light;
+  background-blend-mode: luminosity;
+  /* blend mode makes the image blend with the background color */
   border: 1px solid black;
   box-shadow: 0 0 10px black;
   width: 264px;
@@ -119,7 +133,9 @@ main {
 }
 
 #profile {
-  max-height: 30vh;
+  max-height: 25vh;
+  max-width: 45vw;
+  margin-bottom: 1em;
 }
 
 main h1 {
@@ -134,7 +150,7 @@ main img {
 
 a {
   text-decoration: none;
-  color: rgb(231, 65, 181);
+  color: black;
 }
 
 /* button with animation */
@@ -145,9 +161,10 @@ button {
   max-width: 17em;
   border: none;
   border-radius: 20px;
-  padding: 0.5em;
+  padding: 0.8em;
   margin-top: 1em;
-  box-shadow: 0 0 20px rgb(231, 65, 181);
+  box-shadow: 0 0 20px #e741b5;
+  font-family: monospace;
 }
 
 button:hover {
@@ -180,27 +197,27 @@ button:hover {
   }
 }
 
-/* article */
+/* section */
 
-article {
+section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-article h4 {
+section h4 {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-article p {
+section p {
   margin-top: 0;
   margin-right: 0.5em;
 }
 
-article h3 {
-  margin-top: 0;
+section h3 {
+  margin-top: 1em;
   margin-bottom: 0;
 }
 
@@ -208,7 +225,7 @@ article h3 {
   margin-top: 1em;
 }
 
-article img {
+section img {
   margin: 1.5em 0;
 }
 
@@ -225,7 +242,8 @@ article img {
   max-width: 10vw;
 }
 
-span {
+span,
+i {
   color: rgb(231, 65, 181);
 }
 
@@ -235,15 +253,26 @@ span {
   body {
     align-items: center;
   }
+
+  .bg {
+    display: none;
+  }
+
+  nav {
+    position: absolute;
+    left: 10%;
+  }
+
   main {
-    top: 0;
-    width: 100%;
     height: 100%;
+    overflow: hidden;
+    top: 0;
+    width: 100vw;
     padding: 1em;
     justify-content: space-around;
   }
 
-  article p {
+  section p {
     max-width: 80vw;
     margin-top: 0;
     margin-right: 0.5em;
@@ -254,7 +283,8 @@ span {
   }
 
   #profile {
-    width: 50vw;
-    height: 150vh;
+    content: url('images/cropped.jpg');
+    width: 40vw;
+    height: 100vh;
   }
 }
