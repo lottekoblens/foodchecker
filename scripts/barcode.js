@@ -10,6 +10,8 @@ async function detect() {
     video: { facingMode: 'environment' },
   });
 
+  let probeer;
+
   const video = document.createElement('video');
   video.srcObject = mediaStream;
   video.autoplay = true;
@@ -26,13 +28,13 @@ async function detect() {
             const li = document.createElement('li');
             li.innerHTML = barcode.rawValue; // deze moet in de url van de fetch
             list.appendChild(li);
-            // let probeer = barcode.rawValue;
+            probeer = barcode.rawValue;
           }
         });
       })
       .catch(console.error);
   }
-  console.log(probeer);
+
   function renderLoop() {
     requestAnimationFrame(renderLoop);
     render();

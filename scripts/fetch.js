@@ -1,5 +1,6 @@
-const getData = () => {
+const getData = async () => {
   let barcode = '3366321051983';
+  //   console.log(probeer);
   fetch('https://world.openfoodfacts.org/api/v0/product/' + barcode + '.json')
     .then((response) => response.json())
     .then((data) => {
