@@ -26,12 +26,13 @@ async function detect() {
             const li = document.createElement('li');
             li.innerHTML = barcode.rawValue; // deze moet in de url van de fetch
             list.appendChild(li);
+            // let probeer = barcode.rawValue;
           }
         });
       })
       .catch(console.error);
   }
-
+  console.log(probeer);
   function renderLoop() {
     requestAnimationFrame(renderLoop);
     render();
