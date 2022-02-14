@@ -1,0 +1,17 @@
+body {
+  background: rgb(90, 130, 72);
+  font-family: 'Copperplate', fantasy;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+}
+
+main > h1 {
+  font-size: 55px;
+}
