@@ -4,9 +4,9 @@ window.onload = () => {
   detect();
 };
 
-async function detect() {
+const detect = async () => {
   const barcodeDetector = new BarcodeDetector();
-  const barcodeScanner = document.getElementById('barcode-list');
+  const barcodeScanner = document.getElementById('barcode-element');
   let itemsFound = [];
   const mediaStream = await navigator.mediaDevices.getUserMedia({
     video: { facingMode: 'environment' },
@@ -20,29 +20,29 @@ async function detect() {
 
   barcodeScanner.before(video);
 
-  function render() {
+  const render = () => {
     barcodeDetector
       .detect(video)
       .then((barcodes) => {
         barcodes.forEach((barcode) => {
           if (!itemsFound.includes(barcode.rawValue)) {
             itemsFound.push(barcode.rawValue);
-            // const li = document.createElement('li');
-            // li.innerHTML = barcode.rawValue; // deze moet in de url van de fetch
-            // list.appendChild(li);
             barcodeValue = barcode.rawValue;
             fetchWithBarcode(barcodeValue);
           }
         });
       })
       .catch(console.error);
-  }
+  };
 
-  function renderLoop() {
+  const renderLoop = () => {
     requestAnimationFrame(renderLoop);
     render();
-  }
+  };
   renderLoop();
-}
+};
 
 // https://daily-dev-tips.com/posts/detecting-barcodes-from-the-webcam/
+document.getElementById('scan-button').addEventListener('click', function () {
+  document.querySelector('video').classList.toggle('show');
+});

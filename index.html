@@ -8,10 +8,22 @@
     <title>Foodchecker</title>
   </head>
   <body>
+    <header></header>
     <main>
       <h1>GET THE RIGHT FOOD</h1>
+      <p>
+        Find the food that fits your diet, by scanning the barcode of the
+        products
+      </p>
+      <a id="scan-button">
+        <img src="./images/scan.png" />
+      </a>
+      <div id="barcode-element"></div>
+      <h2>No product scanned yet.</h2>
+      <p>Use the scanner to get more information about the product.</p>
+      <img id="product-image" src="" />
     </main>
-    <div id="barcode-list"></div>
+
     <script type="module" src="./scripts/barcode.js"></script>
     <script type="module" src="./scripts/fetch.js"></script>
   </body>

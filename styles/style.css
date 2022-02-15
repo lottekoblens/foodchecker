@@ -5,7 +5,7 @@ body {
 
 main {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -14,4 +14,16 @@ main {
 
 main > h1 {
   font-size: 55px;
+}
+
+a > img {
+  width: min(100px, 10vw);
+}
+
+video {
+  display: none;
+}
+
+.show {
+  display: block;
 }

@@ -1,18 +1,23 @@
 export function fetchWithBarcode(barcodeValue) {
-  const getData = async () => {
-    // let barcode = '3366321051983';
-    let barcode = barcodeValue;
-    fetch('https://world.openfoodfacts.org/api/v0/product/' + barcode + '.json')
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        console.log(data.product.abbreviated_product_name);
-      })
-      .catch((err) => {
-        // if something goes wrong, the error is displayed in the console
-        console.error(err);
-      });
-  };
+  // let barcode = '3366321051983';
+  let barcode = barcodeValue;
+  fetch('https://world.openfoodfacts.org/api/v0/product/' + barcode + '.json')
+    .then((response) => response.json())
+    .then((data) => {
+      showProduct(data);
+    })
+    .catch((err) => {
+      // if something goes wrong, the error is displayed in the console
+      console.error(err);
+    });
 
-  getData();
+  const showProduct = (data) => {
+    const h2 = document.querySelector('h2');
+    h2.innerHTML = data.product.abbreviated_product_name;
+    console.log(data.product.image_url);
+    const img = document.getElementById('product-image');
+    img.src = data.product.image_url;
+
+    // image_front_thumb_url
+  };
 }
