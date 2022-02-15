@@ -1,6 +1,9 @@
+import { f1 } from './fetch.js';
+
 window.onload = () => {
   detect();
 };
+let probeer;
 
 async function detect() {
   const barcodeDetector = new BarcodeDetector();
@@ -26,9 +29,10 @@ async function detect() {
           if (!itemsFound.includes(barcode.rawValue)) {
             itemsFound.push(barcode.rawValue);
             const li = document.createElement('li');
-            li.innerHTML = barcode.rawValue; // deze moet in de url van de fetch
+            // li.innerHTML = barcode.rawValue; // deze moet in de url van de fetch
             list.appendChild(li);
             probeer = barcode.rawValue;
+            f1(probeer);
           }
         });
       })
