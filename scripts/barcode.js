@@ -1,25 +1,24 @@
-import { f1 } from './fetch.js';
+import { fetchWithBarcode } from './fetch.js';
 
 window.onload = () => {
   detect();
 };
-let probeer;
 
 async function detect() {
   const barcodeDetector = new BarcodeDetector();
-  const list = document.getElementById('barcode-list');
+  const barcodeScanner = document.getElementById('barcode-list');
   let itemsFound = [];
   const mediaStream = await navigator.mediaDevices.getUserMedia({
     video: { facingMode: 'environment' },
   });
 
-  let probeer;
+  let barcodeValue;
 
   const video = document.createElement('video');
   video.srcObject = mediaStream;
   video.autoplay = true;
 
-  list.before(video);
+  barcodeScanner.before(video);
 
   function render() {
     barcodeDetector
@@ -28,11 +27,11 @@ async function detect() {
         barcodes.forEach((barcode) => {
           if (!itemsFound.includes(barcode.rawValue)) {
             itemsFound.push(barcode.rawValue);
-            const li = document.createElement('li');
+            // const li = document.createElement('li');
             // li.innerHTML = barcode.rawValue; // deze moet in de url van de fetch
-            list.appendChild(li);
-            probeer = barcode.rawValue;
-            f1(probeer);
+            // list.appendChild(li);
+            barcodeValue = barcode.rawValue;
+            fetchWithBarcode(barcodeValue);
           }
         });
       })

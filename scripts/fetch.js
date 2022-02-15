@@ -1,8 +1,7 @@
-export function f1(probeer) {
+export function fetchWithBarcode(barcodeValue) {
   const getData = async () => {
     // let barcode = '3366321051983';
-    let barcode = probeer;
-    //   console.log(probeer);
+    let barcode = barcodeValue;
     fetch('https://world.openfoodfacts.org/api/v0/product/' + barcode + '.json')
       .then((response) => response.json())
       .then((data) => {
