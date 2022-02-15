@@ -31,5 +31,9 @@ export function fetchWithBarcode(barcodeValue) {
   const productNotFound = () => {
     const h2 = document.querySelector('h2');
     h2.innerHTML = 'Product is not found';
+    h2.classList.toggle('h2-notfound');
+    const p = document.querySelector('p:nth-of-type(2)');
+    p.innerHTML =
+      "Try to scan it again, if it doesn't work then the product is not known to us";
   };
 }
