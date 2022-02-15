@@ -31,6 +31,7 @@ const detect = async () => {
             barcodeValue = barcode.rawValue;
             fetchWithBarcode(barcodeValue);
             video.remove();
+            console.log(barcodeValue);
           }
         });
       })
