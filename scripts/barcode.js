@@ -6,7 +6,7 @@ import { fetchWithBarcode } from './fetch.js';
 
 const detect = async () => {
   const barcodeDetector = new BarcodeDetector();
-  const barcodeScanner = document.getElementById('barcode-element');
+  // const barcodeScanner = document.getElementById('barcode-element');
   let itemsFound = [];
   const mediaStream = await navigator.mediaDevices.getUserMedia({
     video: { facingMode: 'environment' },
@@ -18,7 +18,8 @@ const detect = async () => {
   video.srcObject = mediaStream;
   video.autoplay = true;
 
-  barcodeScanner.before(video);
+  document.querySelector('h2').before(video);
+  // barcodeScanner.before(video);
 
   const render = () => {
     barcodeDetector

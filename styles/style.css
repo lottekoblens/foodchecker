@@ -36,6 +36,6 @@ video {
   height: max(20vh, 40vh);
 }
 
-.show {
-  display: block;
+#barcode-element {
+  transform: translateX(-100px);
 }
