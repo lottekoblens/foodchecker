@@ -8,20 +8,32 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
   color: white;
+  margin: 0 0.5em;
 }
 
 main > h1 {
   font-size: 55px;
+  margin: 0.2em 0;
 }
 
-a > img {
-  width: min(100px, 10vw);
+a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: min(500px, 50vw);
+  padding: 1em;
+  background: white;
+  color: rgb(90, 130, 72);
+  border-radius: 25px;
+  margin: 1em 0;
 }
 
 video {
-  display: none;
+  display: block;
+  height: max(20vh, 40vh);
 }
 
 .show {

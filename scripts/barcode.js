@@ -1,8 +1,8 @@
 import { fetchWithBarcode } from './fetch.js';
 
-window.onload = () => {
-  detect();
-};
+// window.onload = () => {
+//   detect();
+// };
 
 const detect = async () => {
   const barcodeDetector = new BarcodeDetector();
@@ -29,6 +29,7 @@ const detect = async () => {
             itemsFound.push(barcode.rawValue);
             barcodeValue = barcode.rawValue;
             fetchWithBarcode(barcodeValue);
+            video.remove();
           }
         });
       })
@@ -37,12 +38,15 @@ const detect = async () => {
 
   const renderLoop = () => {
     requestAnimationFrame(renderLoop);
+    // call it once to kick it off, and then it keeps calling itself
     render();
   };
   renderLoop();
 };
 
 // https://daily-dev-tips.com/posts/detecting-barcodes-from-the-webcam/
-document.getElementById('scan-button').addEventListener('click', function () {
-  document.querySelector('video').classList.toggle('show');
-});
+document.getElementById('scan-button').addEventListener(
+  'click',
+  detect
+  // document.querySelector('video').classList.toggle('show');
+);
