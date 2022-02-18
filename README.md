@@ -8,6 +8,8 @@ Make sure you don't eat food that you can't eat because of your allergies.
 
 `git clone https://github.com/lottekoblens/foodchecker.git`
 
+2. Use live server or open the index.html file in the browser to use the application.
+
 <!-- Add a link to your live demo in Github Pages 🌐-->
 
 <!-- ☝️ replace this description with a description of your own work -->
