@@ -6,7 +6,6 @@ import { fetchWithBarcode } from './fetch.js';
 
 const detect = async () => {
   const barcodeDetector = new BarcodeDetector();
-  // const barcodeScanner = document.getElementById('barcode-element');
   let itemsFound = [];
   const mediaStream = await navigator.mediaDevices.getUserMedia({
     video: { facingMode: 'environment' },
@@ -19,7 +18,6 @@ const detect = async () => {
   video.autoplay = true;
 
   document.querySelector('h2').before(video);
-  // barcodeScanner.before(video);
 
   const render = () => {
     barcodeDetector
@@ -46,9 +44,10 @@ const detect = async () => {
   renderLoop();
 };
 
-// https://daily-dev-tips.com/posts/detecting-barcodes-from-the-webcam/
 document.getElementById('scan-button').addEventListener(
   'click',
   detect
   // document.querySelector('video').classList.toggle('show');
 );
+
+// https://daily-dev-tips.com/posts/detecting-barcodes-from-the-webcam/
