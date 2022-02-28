@@ -7,3 +7,7 @@ export function scanButton() {
 export function loadingState() {
   document.getElementById('loading').classList.add('loading-true');
 }
+
+export function removeLoadingState() {
+  document.getElementById('loading').classList.remove('loading-true');
+}

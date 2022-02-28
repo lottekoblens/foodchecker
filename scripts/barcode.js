@@ -1,14 +1,16 @@
 import { fetchWithBarcode } from './fetch.js';
 import { loadingState } from './ui.js';
+import { removeLoadingState } from './ui.js';
 
 // window.onload = () => {
 //   detect();
 // };
 
 export const detect = async () => {
+  document.getElementById('scan-button').disabled = true;
   const barcodeDetector = new BarcodeDetector();
   let itemsFound = [];
-  const mediaStream = await navigator.mediaDevices.getUserMedia({
+  let mediaStream = await navigator.mediaDevices.getUserMedia({
     video: { facingMode: 'environment' },
   });
 
@@ -16,9 +18,9 @@ export const detect = async () => {
 
   const video = document.createElement('video');
   video.srcObject = mediaStream;
-  video.autoplay = true;
+  video.play();
 
-  document.querySelector('h2').before(video);
+  document.getElementById('container-video').append(video);
 
   const render = () => {
     barcodeDetector
@@ -28,10 +30,17 @@ export const detect = async () => {
           if (!itemsFound.includes(barcode.rawValue)) {
             itemsFound.push(barcode.rawValue);
             barcodeValue = barcode.rawValue;
-            fetchWithBarcode(barcodeValue);
-            video.remove();
+
+            // video.remove();
+
             console.log(barcodeValue);
-            barcodes.stop;
+            video.pause();
+            loadingState();
+            setTimeout(function () {
+              video.remove();
+              fetchWithBarcode(barcodeValue);
+              removeLoadingState();
+            }, 5000);
           }
         });
       })
