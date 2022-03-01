@@ -31,17 +31,11 @@ export const detect = async () => {
           if (!itemsFound.includes(barcode.rawValue)) {
             itemsFound.push(barcode.rawValue);
             barcodeValue = barcode.rawValue;
-
-            // video.remove();
-
             console.log(barcodeValue);
             video.pause();
-            // loadingState();
-
             video.remove();
             // fetchWithBarcode(barcodeValue);
             window.location.hash = barcodeValue;
-            // removeLoadingState();
             activateButton();
           }
         });
@@ -57,7 +51,7 @@ export const detect = async () => {
   renderLoop();
 };
 
-export const renderResultaten = (barcodeHash) => {
+export const renderResult = (barcodeHash) => {
   fetchWithBarcode(barcodeHash);
   document.getElementById('product-image').scrollIntoView();
 };
