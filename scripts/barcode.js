@@ -1,5 +1,5 @@
 import { fetchWithBarcode } from './fetch.js';
-import { loadingState } from './ui.js';
+import { activateButton, loadingState } from './ui.js';
 import { removeLoadingState } from './ui.js';
 
 // window.onload = () => {
@@ -7,7 +7,6 @@ import { removeLoadingState } from './ui.js';
 // };
 
 export const detect = async () => {
-  document.getElementById('scan-button').disabled = true;
   const barcodeDetector = new BarcodeDetector();
   let itemsFound = [];
   let mediaStream = await navigator.mediaDevices.getUserMedia({
@@ -18,9 +17,9 @@ export const detect = async () => {
 
   const video = document.createElement('video');
   video.srcObject = mediaStream;
-  video.play();
+  await video.play();
 
-  document.getElementById('container-video').append(video);
+  document.getElementById('scan').append(video);
 
   const render = () => {
     barcodeDetector
@@ -36,11 +35,13 @@ export const detect = async () => {
             console.log(barcodeValue);
             video.pause();
             loadingState();
+
             setTimeout(function () {
               video.remove();
               fetchWithBarcode(barcodeValue);
               removeLoadingState();
-            }, 5000);
+            }, 2000);
+            activateButton();
           }
         });
       })
