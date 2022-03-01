@@ -6,7 +6,7 @@ export function fetchWithBarcode(barcodeValue) {
   let barcode = barcodeValue;
 
   fetch('https://world.openfoodfacts.org/api/v0/product/' + barcode + '.json')
-    .then((response) => response.json(), loadingState())
+    .then((response) => response.json(), console.log(barcodeValue))
     .then((data) => {
       if (data.status_verbose === 'product not found') {
         productNotFound();

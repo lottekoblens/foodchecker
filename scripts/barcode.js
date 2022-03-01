@@ -38,7 +38,8 @@ export const detect = async () => {
 
             setTimeout(function () {
               video.remove();
-              fetchWithBarcode(barcodeValue);
+              // fetchWithBarcode(barcodeValue);
+              window.location.hash = barcodeValue;
               removeLoadingState();
               document.getElementById('result').scrollIntoView();
             }, 2000);
@@ -57,4 +58,7 @@ export const detect = async () => {
   renderLoop();
 };
 
+export const renderResultaten = (barcodeHash) => {
+  fetchWithBarcode(barcodeHash);
+};
 // https://daily-dev-tips.com/posts/detecting-barcodes-from-the-webcam/
