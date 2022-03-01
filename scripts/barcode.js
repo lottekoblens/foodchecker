@@ -17,7 +17,9 @@ export const detect = async () => {
 
   const video = document.createElement('video');
   video.srcObject = mediaStream;
+  loadingState();
   await video.play();
+  removeLoadingState();
 
   document.getElementById('scan').append(video);
 
@@ -34,15 +36,12 @@ export const detect = async () => {
 
             console.log(barcodeValue);
             video.pause();
-            loadingState();
+            // loadingState();
 
-            setTimeout(function () {
-              video.remove();
-              // fetchWithBarcode(barcodeValue);
-              window.location.hash = barcodeValue;
-              removeLoadingState();
-              document.getElementById('result').scrollIntoView();
-            }, 2000);
+            video.remove();
+            // fetchWithBarcode(barcodeValue);
+            window.location.hash = barcodeValue;
+            // removeLoadingState();
             activateButton();
           }
         });
@@ -60,5 +59,6 @@ export const detect = async () => {
 
 export const renderResultaten = (barcodeHash) => {
   fetchWithBarcode(barcodeHash);
+  document.getElementById('product-image').scrollIntoView();
 };
 // https://daily-dev-tips.com/posts/detecting-barcodes-from-the-webcam/

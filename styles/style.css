@@ -38,6 +38,7 @@ button {
   font-family: 'Copperplate', fantasy;
   border: 0.1em solid black;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  font-size: 1em;
 }
 
 button:disabled {
@@ -130,14 +131,18 @@ h3 {
     linear-gradient(to bottom, black 4px, transparent 4px) 100% 0,
     linear-gradient(to top, black 4px, transparent 4px) 0 100%,
     linear-gradient(to top, black 4px, transparent 4px) 100% 100%;
-
   background-repeat: no-repeat;
   background-size: 20px 20px;
 }
 
 #result {
-  margin-top: 3em;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+  /* height: 100vh; */
+  text-align: center;
 }
 
 li {
