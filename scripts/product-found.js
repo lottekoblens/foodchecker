@@ -1,12 +1,45 @@
 const h2 = document.querySelector('h2');
 const img = document.getElementById('product-image');
-const h3 = document.querySelector('h3');
-const p = document.querySelector('p:nth-of-type(2)');
+const h3Ingredients = document.querySelector('h3:nth-of-type(1)');
+const h3Allergies = document.querySelector('h3:nth-of-type(2)');
+const ulAllergies = document.querySelector('ul:nth-of-type(2)');
+const ulIngredients = document.querySelector('ul:nth-of-type(1)');
 
 export const showProduct = (data) => {
-  h2.innerHTML = data.product.abbreviated_product_name;
+  h2.innerHTML = data.product.product_name;
   img.src = data.product.image_url;
-  h3.classList.toggle('show');
-  h3.innerHTML = 'Allergens:';
-  p.innerHTML = data.product.allergens;
+  // h3.classList.toggle('show');
+
+  // ul.append('li').innerHTML = data.product.allergens_imported;
+  // ingredients_text_en
+  if (data.product.ingredients_text_en) {
+    h3Ingredients.innerHTML = 'Ingredients:';
+    const ingredients = data.product.ingredients_text_en;
+    const ingredientsArray = ingredients.split(',');
+    ulIngredients.innerHTML = '';
+    ingredientsArray.forEach((ingredients) => {
+      let listItemIngredient = document.createElement('li');
+      if (ingredients !== '') {
+        listItemIngredient.innerHTML = '-' + ingredients;
+        ulIngredients.appendChild(listItemIngredient);
+      }
+    });
+  } else {
+    h3Ingredients.innerHTML = 'No ingredients known';
+  }
+  if (data.product.allergens_imported) {
+    h3Allergies.innerHTML = 'Allergies:';
+    const allergies = data.product.allergens_imported;
+    const allergiesArray = allergies.split(',');
+    ulAllergies.innerHTML = '';
+    allergiesArray.forEach((allergy) => {
+      let listItemAllergy = document.createElement('li');
+      if (allergy !== '') {
+        listItemAllergy.innerHTML = '-' + allergy;
+        ulAllergies.appendChild(listItemAllergy);
+      }
+    });
+  } else {
+    h3Allergies.innerHTML = 'No allergies known';
+  }
 };

@@ -60,9 +60,14 @@ video {
   max-width: 90vw;
 }
 
+h2 {
+  color: #1e352f;
+}
+
 h3 {
-  display: none;
+  margin-top: 2em;
   margin-bottom: 0;
+  color: #284730;
 }
 
 .show {
@@ -128,4 +133,14 @@ h3 {
 
   background-repeat: no-repeat;
   background-size: 20px 20px;
+}
+
+#result {
+  margin-top: 3em;
+  height: 100vh;
+}
+
+li {
+  list-style-type: none;
+  margin-left: -2em;
 }

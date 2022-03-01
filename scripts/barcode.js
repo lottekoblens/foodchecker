@@ -40,6 +40,7 @@ export const detect = async () => {
               video.remove();
               fetchWithBarcode(barcodeValue);
               removeLoadingState();
+              document.getElementById('result').scrollIntoView();
             }, 2000);
             activateButton();
           }
