@@ -2,19 +2,19 @@
 
 Make sure you don't eat food that you can't eat because of your allergies.
 
-## Table of contents
+## :bookmark_tabs: Table of contents
 
-## Assessment
+## :clipboard: Assessment
 
 This is the assignment: 'Design and build a Single Page Web App based on a User Story.' 
 
 The user story that I've chosen is as follows: _'As a foodie, I want to be able to scan a product while shopping so that I can read more information about the product and make a good choice whether it fits my diet._
 
-### Rubric
+### :clipboard: Rubric
 
 ![Rubric](https://github.com/lottekoblens/foodchecker/blob/main/images/Rubric.png)
 
-## Concept
+## :bulb: Concept
 
 This web app fits the following user story: _'As a foodie, I want to be able to scan a product while shopping so that I can read more information about the product and make a good choice whether it fits my diet.'_
 
@@ -22,7 +22,7 @@ This web app fits the following user story: _'As a foodie, I want to be able to 
 
 ![Activity diagram](https://github.com/lottekoblens/foodchecker/blob/main/images/activitydiagram.png)
 
-## Installation
+## :wrench: Installation
 
 1. Clone this repository by putting this in your terminal:
 
@@ -30,12 +30,12 @@ This web app fits the following user story: _'As a foodie, I want to be able to 
 
 2. Use live server or open the index.html file in the browser to use the application.
 
-## Process
+## :chart_with_upwards_trend: Process
 
 If you want to know more about my process, go [here](https://github.com/lottekoblens/foodchecker/wiki/Proces).
 
-## Wishlist
+## :pencil: Wishlist
 
-## License
+## :page_with_curl: License
 
 [MIT](https://github.com/lottekoblens/foodchecker/blob/main/LICENSE)
