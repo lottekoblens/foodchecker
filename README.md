@@ -2,8 +2,21 @@
 
 Make sure you don't eat food that you can't eat because of your allergies.
 
+## Table of contents
 
-## Activity diagram
+## Assessment
+
+This is the assignment: _Design and build a Single Page Web App based on a User Story.' the user story that I've chosen is as follows: 'As a foodie, I want to be able to scan a product while shopping so that I can read more information about the product and make a good choice whether it fits my diet._
+
+### Rubric
+
+![Rubric]()
+
+## Concept
+
+This web app fits the following user story: _'As a foodie, I want to be able to scan a product while shopping so that I can read more information about the product and make a good choice whether it fits my diet.'_
+
+### Activity diagram
 
 ![Activity diagram](https://github.com/lottekoblens/foodchecker/blob/main/images/activitydiagram.png)
 
@@ -15,22 +28,12 @@ Make sure you don't eat food that you can't eat because of your allergies.
 
 2. Use live server or open the index.html file in the browser to use the application.
 
-<!-- Add a link to your live demo in Github Pages 🌐-->
+## Process
 
-<!-- ☝️ replace this description with a description of your own work -->
+If you want to know more about my process, go [here]()
 
-<!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
+## Wishlist
 
-<!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
+## License
 
-<!-- Maybe a table of contents here? 📚 -->
-
-<!-- How about a section that describes how to install this project? 🤓 -->
-
-<!-- ...but how does one use this project? What are its features 🤔 -->
-
-<!-- What external data source is featured in your project and what are its properties 🌠 -->
-
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
-
-<!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
+[MIT]()
