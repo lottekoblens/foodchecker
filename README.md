@@ -2,6 +2,11 @@
 
 Make sure you don't eat food that you can't eat because of your allergies.
 
+
+## Activity diagram
+
+![Activity diagram](https://github.com/lottekoblens/foodchecker/blob/main/images/activitydiagram.png)
+
 ## Installation
 
 1. Clone this repository by putting this in your terminal:
