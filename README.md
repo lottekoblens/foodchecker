@@ -6,7 +6,9 @@ Make sure you don't eat food that you can't eat because of your allergies.
 
 ## Assessment
 
-This is the assignment: _Design and build a Single Page Web App based on a User Story.' the user story that I've chosen is as follows: 'As a foodie, I want to be able to scan a product while shopping so that I can read more information about the product and make a good choice whether it fits my diet._
+This is the assignment: 'Design and build a Single Page Web App based on a User Story.' 
+
+The user story that I've chosen is as follows: _'As a foodie, I want to be able to scan a product while shopping so that I can read more information about the product and make a good choice whether it fits my diet._
 
 ### Rubric
 
