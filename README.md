@@ -30,7 +30,7 @@ This web app fits the following user story: _'As a foodie, I want to be able to 
 
 ## Process
 
-If you want to know more about my process, go [here]()
+If you want to know more about my process, go [here](https://github.com/lottekoblens/foodchecker/wiki/Proces)
 
 ## Wishlist
 
