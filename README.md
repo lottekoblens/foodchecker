@@ -10,7 +10,7 @@ This is the assignment: _Design and build a Single Page Web App based on a User 
 
 ### Rubric
 
-![Rubric]()
+![Rubric](https://github.com/lottekoblens/foodchecker/blob/main/images/Rubric.png)
 
 ## Concept
 
