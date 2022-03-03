@@ -2,6 +2,11 @@
 
 Make sure you don't eat food that you can't eat because of your allergies.
 
+
+## Activity diagram
+
+[Activity diagram]()
+
 ## Installation
 
 1. Clone this repository by putting this in your terminal:
