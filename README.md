@@ -36,4 +36,4 @@ If you want to know more about my process, go [here]()
 
 ## License
 
-[MIT]()
+[MIT](https://github.com/lottekoblens/foodchecker/blob/main/LICENSE)
