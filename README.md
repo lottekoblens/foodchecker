@@ -7,7 +7,7 @@ Make sure you don't eat food that you can't eat because of your allergies.
 * [Rubric](https://github.com/lottekoblens/foodchecker#clipboard-rubric)
 * [Concept](https://github.com/lottekoblens/foodchecker#bulb-concept)
 * [Activity diagram](https://github.com/lottekoblens/foodchecker#activity-diagram)
-* [Installation]()
+* [Installation](https://github.com/lottekoblens/foodchecker#wrench-installation)
 * [Process]()
 * [Wishlist]()
 * [License]()
