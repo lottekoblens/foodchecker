@@ -2,10 +2,6 @@ import { fetchWithBarcode } from './fetch.js';
 import { activateButton, loadingState } from './ui.js';
 import { removeLoadingState } from './ui.js';
 
-// window.onload = () => {
-//   detect();
-// };
-
 export const detect = async () => {
   const barcodeDetector = new BarcodeDetector();
   let itemsFound = [];
@@ -51,7 +47,7 @@ export const detect = async () => {
   renderLoop();
 };
 
-export const renderResult = (barcodeHash) => {
+export const renderProduct = (barcodeHash) => {
   fetchWithBarcode(barcodeHash);
   document.getElementById('product-image').scrollIntoView();
 };
