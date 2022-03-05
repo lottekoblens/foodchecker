@@ -49,6 +49,6 @@ export const detect = async () => {
 
 export const renderProduct = (barcodeHash) => {
   fetchWithBarcode(barcodeHash);
-  document.getElementById('product-image').scrollIntoView();
+  document.getElementById('result').scrollIntoView({ block: 'end' });
 };
 // https://daily-dev-tips.com/posts/detecting-barcodes-from-the-webcam/

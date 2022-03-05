@@ -145,3 +145,40 @@ li {
   list-style-type: none;
   margin-left: -2em;
 }
+
+#error {
+  position: absolute;
+  height: fit-content;
+  width: 75vmin;
+  z-index: 1;
+  background-color: white;
+  color: black;
+  left: 12vmin;
+  top: 95vmin;
+}
+
+#error > * {
+  margin: 1em auto;
+  width: 60vmin;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type='button'] {
+  width: 20vmin;
+  background-color: #ba73c9;
+  color: black;
+  border-radius: 2em;
+  margin-top: 0.5em;
+  padding: 0.5em;
+  border: 0.1em solid black;
+  font-family: 'Copperplate', fantasy;
+  font-size: 0.9em;
+}
+
+.hidden {
+  display: none;
+}

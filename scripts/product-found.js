@@ -6,12 +6,9 @@ const ulAllergies = document.querySelector('ul:nth-of-type(2)');
 const ulIngredients = document.querySelector('ul:nth-of-type(1)');
 
 export const showProduct = (data) => {
+  document.getElementById('result').scrollIntoView({ block: 'center', behavior: 'smooth' });
   h2.innerHTML = data.product.product_name;
   img.src = data.product.image_url;
-  // h3.classList.toggle('show');
-
-  // ul.append('li').innerHTML = data.product.allergens_imported;
-  // ingredients_text_en
   if (data.product.ingredients_text_en) {
     h3Ingredients.innerHTML = 'Ingredients:';
     const ingredients = data.product.ingredients_text_en;
