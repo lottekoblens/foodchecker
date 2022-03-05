@@ -28,7 +28,7 @@ This web app fits the following user story: _'As a foodie, I want to be able to 
 
 ### Activity diagram
 
-![Activity diagram](https://github.com/lottekoblens/foodchecker/blob/main/images/activitydiagram.png)
+![Activity diagram](https://github.com/lottekoblens/foodchecker/blob/main/images/activitydiagram-v2.png)
 
 ## :wrench: Installation
 
