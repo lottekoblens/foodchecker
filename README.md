@@ -9,6 +9,7 @@ Entree | Scan | Product
 ## :bookmark_tabs: Table of contents
 * [Concept](https://github.com/lottekoblens/foodchecker#bulb-concept)
 * [Features](https://github.com/lottekoblens/foodchecker#high_brightness-features)
+* [Data]()
 * [Demo](https://github.com/lottekoblens/foodchecker#computer-demo)
 * [Assessment](https://github.com/lottekoblens/foodchecker#clipboard-assessment)
 * [Rubric](https://github.com/lottekoblens/foodchecker#clipboard-rubric)
@@ -30,6 +31,9 @@ So the app makes sure that the user eats things that fit their diet. They scan t
 * When scan doesn't work -> fill in barcode -> get information about that product
 * When barcode is not found -> given feedback that it's not found
 
+## :file_folder: Data 
+
+The data that is used in this project comes from 
 
 ## Activity diagram
 
