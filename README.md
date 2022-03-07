@@ -15,7 +15,7 @@ Make sure you don't eat food that you can't eat because of your allergies.
 
 ## :computer: Demo
 
-[Live demo]()
+[Live demo](https://lottekoblens.github.io/foodchecker/)
 
 ## :clipboard: Assessment
 
