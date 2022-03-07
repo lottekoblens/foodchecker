@@ -18,6 +18,12 @@ Make sure you don't eat food that you can't eat because of your allergies.
 This web app fits the following user story: _'As a foodie, I want to be able to scan a product while shopping so that I can read more information about the product and make a good choice whether it fits my diet.'_
 So the app makes sure that the user eats things that fit their diet. They scan the barcode of the product and the information of the product comes forward. 
 
+## Features
+
+* Scan a product -> get information about that product
+* When scan doesn't work -> fill in barcode -> get information about that product
+* When barcode is not found -> given feedback that it's not found
+
 
 ## Activity diagram
 
