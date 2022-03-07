@@ -2,9 +2,11 @@
 
 Make sure you don't eat food that you can't eat because of your allergies.
 
-Landing page | Product page
-:-------------------------:|:-------------------------:
-![Landing page](https://github.com/lottekoblens/foodchecker/blob/main/images/home.png) | ![Product page](https://github.com/lottekoblens/foodchecker/blob/main/images/product.png)
+Entree | Scan | Product
+:-------------------------:|:-------------------------:|:-------------------------:
+![Landing page](https://github.com/lottekoblens/foodchecker/blob/main/images/home.png) |  ![Scan page](https://github.com/lottekoblens/foodchecker/blob/main/images/scan-page.png) | ![Product page](https://github.com/lottekoblens/foodchecker/blob/main/images/product.png)
+
+
 
 
 
