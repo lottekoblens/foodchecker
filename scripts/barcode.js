@@ -9,6 +9,7 @@ export const detect = async () => {
     // use the back camera of the phone
   });
 
+  let itemsFound = [];
   let barcodeValue;
 
   const video = document.createElement('video');
@@ -29,13 +30,16 @@ export const detect = async () => {
       // The detect() returns a Promise which fulfills with an Array of detected barcodes within an image.
       .then((barcodes) => {
         barcodes.forEach((barcode) => {
-          barcodeValue = barcode.rawValue;
-          // rawValue is a string decoded from the barcode data
-          video.pause();
-          video.remove();
-          window.location.hash = barcodeValue;
-          // put the barcodeValue in the window.location.hash
-          activateButton();
+          if (!itemsFound.includes(barcode.rawValue)) {
+            itemsFound.push(barcode.rawValue);
+            barcodeValue = barcode.rawValue;
+            // rawValue is a string decoded from the barcode data
+            video.pause();
+            video.remove();
+            window.location.hash = barcodeValue;
+            // put the barcodeValue in the window.location.hash
+            activateButton();
+          }
         });
       })
       .catch(console.error);
