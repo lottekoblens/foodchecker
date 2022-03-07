@@ -4,11 +4,22 @@ const h3Ingredients = document.querySelector('h3:nth-of-type(1)');
 const h3Allergies = document.querySelector('h3:nth-of-type(2)');
 const ulAllergies = document.querySelector('ul:nth-of-type(2)');
 const ulIngredients = document.querySelector('ul:nth-of-type(1)');
+const result = document.getElementById('result');
 
 export const showProduct = (data) => {
-  document.getElementById('result').scrollIntoView({ block: 'center', behavior: 'smooth' });
-  h2.innerHTML = data.product.product_name;
+  result.classList.remove('moveToTop');
+  result.scrollIntoView({ block: 'center', behavior: 'smooth' });
+
+  // product name
+  if (data.product.product_name) {
+    h2.innerHTML = data.product.product_name;
+  } else {
+    h2.innerHTML = 'Geen productnaam gevonden';
+  }
+  // image of product
   img.src = data.product.image_url;
+
+  // ingredients of product
   if (data.product.ingredients_text_en) {
     h3Ingredients.innerHTML = 'Ingredients:';
     const ingredients = data.product.ingredients_text_en;
@@ -24,6 +35,8 @@ export const showProduct = (data) => {
   } else {
     h3Ingredients.innerHTML = 'No ingredients known';
   }
+
+  // allergies of product
   if (data.product.allergens_imported) {
     h3Allergies.innerHTML = 'Allergies:';
     const allergies = data.product.allergens_imported;

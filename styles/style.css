@@ -1,6 +1,7 @@
 body {
   background: #7ea76c;
   font-family: 'Copperplate', fantasy;
+  scroll-behavior: smooth;
 }
 
 main {
@@ -127,8 +128,12 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 2em;
   text-align: center;
+  height: 100vh;
+}
+
+.moveToTop {
+  margin-top: -16em;
 }
 
 li {

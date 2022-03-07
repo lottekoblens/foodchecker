@@ -4,36 +4,38 @@ import { removeLoadingState } from './ui.js';
 
 export const detect = async () => {
   const barcodeDetector = new BarcodeDetector();
-  let itemsFound = [];
   let mediaStream = await navigator.mediaDevices.getUserMedia({
     video: { facingMode: 'environment' },
+    // use the back camera of the phone
   });
 
   let barcodeValue;
 
   const video = document.createElement('video');
+  // create a html element video
   video.srcObject = mediaStream;
+  // show the mediaStream in the video element
+
   loadingState();
   await video.play();
   removeLoadingState();
 
   document.getElementById('scan').append(video);
+  // append the video element to the element with the id scan
 
   const render = () => {
     barcodeDetector
       .detect(video)
+      // The detect() returns a Promise which fulfills with an Array of detected barcodes within an image.
       .then((barcodes) => {
         barcodes.forEach((barcode) => {
-          if (!itemsFound.includes(barcode.rawValue)) {
-            itemsFound.push(barcode.rawValue);
-            barcodeValue = barcode.rawValue;
-            console.log(barcodeValue);
-            video.pause();
-            video.remove();
-            // fetchWithBarcode(barcodeValue);
-            window.location.hash = barcodeValue;
-            activateButton();
-          }
+          barcodeValue = barcode.rawValue;
+          // rawValue is a string decoded from the barcode data
+          video.pause();
+          video.remove();
+          window.location.hash = barcodeValue;
+          // put the barcodeValue in the window.location.hash
+          activateButton();
         });
       })
       .catch(console.error);
@@ -48,7 +50,9 @@ export const detect = async () => {
 };
 
 export const renderProduct = (barcodeHash) => {
+  loadingState();
   fetchWithBarcode(barcodeHash);
-  document.getElementById('result').scrollIntoView({ block: 'end' });
+  // give barcodeHash to the function fetchWithBarcode and run that function
 };
-// https://daily-dev-tips.com/posts/detecting-barcodes-from-the-webcam/
+
+// Source barcode scanner: https://daily-dev-tips.com/posts/detecting-barcodes-from-the-webcam/
