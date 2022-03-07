@@ -33,7 +33,11 @@ So the app makes sure that the user eats things that fit their diet. They scan t
 
 ## :file_folder: Data 
 
-The data that is used in this project comes from 
+The data that is used in this project comes from world.openfoodfacts.org. To get information about a product, a fetch is done with the barcode of the product in the url. So the fetch url looks something like this: 
+
+``` `https://world.openfoodfacts.org/api/v0/product/'${barcode}.json` ```
+
+The ${barcode} is a dynamic value. It's get from the barcode scanner or from the value the user fills in when the scan can't find the barcode.
 
 ## Activity diagram
 
