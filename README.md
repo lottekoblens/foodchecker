@@ -57,6 +57,8 @@ If you want to know more about my process, go [here](https://github.com/lottekob
 
 ## :pencil: Wishlist
 
+* When the user doens't allow you to use the camera -> create a state that gives them feedback about it and give them the option again to change that and give the camera permission. 
+
 ## :page_with_curl: License
 
 [MIT](https://github.com/lottekoblens/foodchecker/blob/main/LICENSE)
