@@ -3,15 +3,24 @@
 Make sure you don't eat food that you can't eat because of your allergies.
 
 ## :bookmark_tabs: Table of contents
+* [Concept](https://github.com/lottekoblens/foodchecker#bulb-concept)
 * [Demo](https://github.com/lottekoblens/foodchecker#computer-demo)
 * [Assessment](https://github.com/lottekoblens/foodchecker#clipboard-assessment)
 * [Rubric](https://github.com/lottekoblens/foodchecker#clipboard-rubric)
-* [Concept](https://github.com/lottekoblens/foodchecker#bulb-concept)
 * [Activity diagram](https://github.com/lottekoblens/foodchecker#activity-diagram)
 * [Installation](https://github.com/lottekoblens/foodchecker#wrench-installation)
 * [Process](https://github.com/lottekoblens/foodchecker#chart_with_upwards_trend-process)
 * [Wishlist](https://github.com/lottekoblens/foodchecker#pencil-wishlist)
 * [License](https://github.com/lottekoblens/foodchecker#page_with_curl-license)
+
+## :bulb: Concept
+
+This web app fits the following user story: _'As a foodie, I want to be able to scan a product while shopping so that I can read more information about the product and make a good choice whether it fits my diet.'_
+
+
+## Activity diagram
+
+![Activity diagram](https://github.com/lottekoblens/foodchecker/blob/main/images/activitydiagram-v2.png)
 
 ## :computer: Demo
 
@@ -26,14 +35,6 @@ The user story that I've chosen is as follows: _'As a foodie, I want to be able 
 ### :clipboard: Rubric
 
 ![Rubric](https://github.com/lottekoblens/foodchecker/blob/main/images/Rubric.png)
-
-## :bulb: Concept
-
-This web app fits the following user story: _'As a foodie, I want to be able to scan a product while shopping so that I can read more information about the product and make a good choice whether it fits my diet.'_
-
-### Activity diagram
-
-![Activity diagram](https://github.com/lottekoblens/foodchecker/blob/main/images/activitydiagram-v2.png)
 
 ## :wrench: Installation
 
