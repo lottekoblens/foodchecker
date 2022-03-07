@@ -2,15 +2,14 @@
 
 Make sure you don't eat food that you can't eat because of your allergies.
 
-Landing page | Product page
-:-------------------------:|:-------------------------:
-![Landing page](https://github.com/lottekoblens/foodchecker/blob/main/images/home.png) | ![Product page](https://github.com/lottekoblens/foodchecker/blob/main/images/product.png)
-
-
+Entree | Scan | Product
+:-------------------------:|:-------------------------:|:-------------------------:
+![Landing page](https://github.com/lottekoblens/foodchecker/blob/main/images/home.png) |  ![Scan page](https://github.com/lottekoblens/foodchecker/blob/main/images/scan-page.png) | ![Product page](https://github.com/lottekoblens/foodchecker/blob/main/images/product.png)
 
 ## :bookmark_tabs: Table of contents
 * [Concept](https://github.com/lottekoblens/foodchecker#bulb-concept)
 * [Features](https://github.com/lottekoblens/foodchecker#high_brightness-features)
+* [Data](https://github.com/lottekoblens/foodchecker#file_folder-data)
 * [Demo](https://github.com/lottekoblens/foodchecker#computer-demo)
 * [Assessment](https://github.com/lottekoblens/foodchecker#clipboard-assessment)
 * [Rubric](https://github.com/lottekoblens/foodchecker#clipboard-rubric)
@@ -18,8 +17,8 @@ Landing page | Product page
 * [Installation](https://github.com/lottekoblens/foodchecker#wrench-installation)
 * [Process](https://github.com/lottekoblens/foodchecker#chart_with_upwards_trend-process)
 * [Wishlist](https://github.com/lottekoblens/foodchecker#pencil-wishlist)
-* [License](https://github.com/lottekoblens/foodchecker#page_with_curl-license)
 * [Resources](https://github.com/lottekoblens/foodchecker#open_file_folder-resources)
+* [License](https://github.com/lottekoblens/foodchecker#page_with_curl-license)
 
 ## :bulb: Concept
 
@@ -32,6 +31,13 @@ So the app makes sure that the user eats things that fit their diet. They scan t
 * When scan doesn't work -> fill in barcode -> get information about that product
 * When barcode is not found -> given feedback that it's not found
 
+## :file_folder: Data 
+
+The data that is used in this project comes from world.openfoodfacts.org. To get information about a product, a fetch is done with the barcode of the product in the url. So the fetch url looks something like this: 
+
+``` `https://world.openfoodfacts.org/api/v0/product/'${barcode}.json` ```
+
+The ${barcode} is a dynamic value. It's get from the barcode scanner or from the value the user fills in when the scan can't find the barcode.
 
 ## Activity diagram
 
@@ -67,10 +73,10 @@ If you want to know more about my process, go [here](https://github.com/lottekob
 
 * When the user doens't allow you to use the camera -> create a state that gives them feedback about it and give them the option again to change that and give the camera permission. 
 
-## :page_with_curl: License
-
-[MIT](https://github.com/lottekoblens/foodchecker/blob/main/LICENSE)
-
 ## :open_file_folder: Resources
 
 * Bongers, C. (2021, 29 april). Detecting barcodes from the webcam. Daily Dev Tips. Geraadpleegd op 14 februari 2022, van https://daily-dev-tips.com/posts/detecting-barcodes-from-the-webcam/
+
+## :page_with_curl: License
+
+[MIT](https://github.com/lottekoblens/foodchecker/blob/main/LICENSE)
