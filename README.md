@@ -12,6 +12,7 @@ Make sure you don't eat food that you can't eat because of your allergies.
 * [Process](https://github.com/lottekoblens/foodchecker#chart_with_upwards_trend-process)
 * [Wishlist](https://github.com/lottekoblens/foodchecker#pencil-wishlist)
 * [License](https://github.com/lottekoblens/foodchecker#page_with_curl-license)
+* [Resources]()
 
 ## :bulb: Concept
 
@@ -62,3 +63,7 @@ If you want to know more about my process, go [here](https://github.com/lottekob
 ## :page_with_curl: License
 
 [MIT](https://github.com/lottekoblens/foodchecker/blob/main/LICENSE)
+
+## :open_file_folder: Resources
+
+* Bongers, C. (2021, 29 april). Detecting barcodes from the webcam. Daily Dev Tips. Geraadpleegd op 14 februari 2022, van https://daily-dev-tips.com/posts/detecting-barcodes-from-the-webcam/
