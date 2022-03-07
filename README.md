@@ -2,8 +2,7 @@
 
 Make sure you don't eat food that you can't eat because of your allergies.
 
-![Home](https://github.com/lottekoblens/foodchecker/blob/main/images/home.png)
-![Product]()
+![Home](https://github.com/lottekoblens/foodchecker/blob/main/images/home.png) ![Product](https://github.com/lottekoblens/foodchecker/blob/main/images/product.png)
 
 ## :bookmark_tabs: Table of contents
 * [Concept](https://github.com/lottekoblens/foodchecker#bulb-concept)
