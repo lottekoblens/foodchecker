@@ -12,7 +12,7 @@ Make sure you don't eat food that you can't eat because of your allergies.
 * [Process](https://github.com/lottekoblens/foodchecker#chart_with_upwards_trend-process)
 * [Wishlist](https://github.com/lottekoblens/foodchecker#pencil-wishlist)
 * [License](https://github.com/lottekoblens/foodchecker#page_with_curl-license)
-* [Resources]()
+* [Resources](https://github.com/lottekoblens/foodchecker#open_file_folder-resources)
 
 ## :bulb: Concept
 
