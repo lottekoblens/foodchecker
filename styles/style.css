@@ -1,10 +1,6 @@
 body {
   background: #7ea76c;
   font-family: 'Copperplate', fantasy;
-  /* margin-bottom: 2em; */
-  /* display: flex;
-  max-width: 100vw;
-  overflow: scroll; */
 }
 
 main {
@@ -19,7 +15,7 @@ main {
 }
 
 main > h1 {
-  font-size: 45px;
+  font-size: 3em;
   margin: 0.2em 0;
   color: #1e352f;
 }
@@ -37,7 +33,7 @@ button {
   margin: 1em 0;
   font-family: 'Copperplate', fantasy;
   border: 0.1em solid black;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.1);
   font-size: 1em;
 }
 
@@ -47,9 +43,6 @@ button:disabled {
 
 video {
   display: block;
-  /* height: max(20vh, 40vh); */
-  /* border-radius: 2em; */
-  /* width: 85vw; */
   margin-top: 0.5em;
   margin-left: 1em;
   object-fit: cover;
@@ -119,16 +112,14 @@ h3 {
 }
 
 #scan {
-  /* border: 1em solid black; */
   height: 85vmin;
   width: 89vmin;
-  /* border-radius: 2em; */
-  background: linear-gradient(to right, black 4px, transparent 4px) 0 0, linear-gradient(to right, black 4px, transparent 4px) 0 100%,
-    linear-gradient(to left, black 4px, transparent 4px) 100% 0, linear-gradient(to left, black 4px, transparent 4px) 100% 100%,
-    linear-gradient(to bottom, black 4px, transparent 4px) 0 0, linear-gradient(to bottom, black 4px, transparent 4px) 100% 0,
-    linear-gradient(to top, black 4px, transparent 4px) 0 100%, linear-gradient(to top, black 4px, transparent 4px) 100% 100%;
+  background: linear-gradient(to right, black 0.25em, transparent 0.25em) 0 0, linear-gradient(to right, black 0.25em, transparent 0.25em) 0 100%,
+    linear-gradient(to left, black 0.25em, transparent 0.25em) 100% 0, linear-gradient(to left, black 0.25em, transparent 0.25em) 100% 100%,
+    linear-gradient(to bottom, black 0.25em, transparent 0.25em) 0 0, linear-gradient(to bottom, black 0.25em, transparent 0.25em) 100% 0,
+    linear-gradient(to top, black 0.25em, transparent 0.25em) 0 100%, linear-gradient(to top, black 0.25em, transparent 0.25em) 100% 100%;
   background-repeat: no-repeat;
-  background-size: 20px 20px;
+  background-size: 1.2em 1.2em;
 }
 
 #result {
@@ -137,7 +128,6 @@ h3 {
   justify-content: center;
   align-items: center;
   margin-top: 2em;
-  /* height: 100vh; */
   text-align: center;
 }
 

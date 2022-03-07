@@ -1,12 +1,7 @@
 import { showProduct } from './product-found.js';
 import { errorState } from './error.js';
+import { emptyContent } from './ui.js';
 const popup = document.getElementById('popup');
-const h2 = document.querySelector('h2');
-const img = document.getElementById('product-image');
-const h3Ingredients = document.querySelector('h3:nth-of-type(1)');
-const h3Allergies = document.querySelector('h3:nth-of-type(2)');
-const ulAllergies = document.querySelector('ul:nth-of-type(2)');
-const ulIngredients = document.querySelector('ul:nth-of-type(1)');
 const button = document.getElementById('scan-button');
 const buttonContinue = document.getElementById('continue-button');
 
@@ -18,12 +13,7 @@ export const fetchWithBarcode = (barcodeValue) => {
     .then((data) => {
       if (data.status_verbose === 'product not found' || data.status_verbose === 'no code or invalid code') {
         errorState(data);
-        h2.innerHTML = '';
-        img.src = '';
-        h3Allergies.innerHTML = '';
-        h3Ingredients.innerHTML = '';
-        ulAllergies.innerHTML = '';
-        ulIngredients.innerHTML = '';
+        emptyContent();
         popup.classList.remove('hidden');
         button.disabled = true;
         buttonContinue.disabled = true;
