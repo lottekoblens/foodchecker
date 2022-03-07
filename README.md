@@ -9,7 +9,7 @@ Entree | Scan | Product
 ## :bookmark_tabs: Table of contents
 * [Concept](https://github.com/lottekoblens/foodchecker#bulb-concept)
 * [Features](https://github.com/lottekoblens/foodchecker#high_brightness-features)
-* [Data]()
+* [Data](https://github.com/lottekoblens/foodchecker#file_folder-data)
 * [Demo](https://github.com/lottekoblens/foodchecker#computer-demo)
 * [Assessment](https://github.com/lottekoblens/foodchecker#clipboard-assessment)
 * [Rubric](https://github.com/lottekoblens/foodchecker#clipboard-rubric)
