@@ -13,7 +13,7 @@ Make sure you don't eat food that you can't eat because of your allergies.
 * [Wishlist](https://github.com/lottekoblens/foodchecker#pencil-wishlist)
 * [License](https://github.com/lottekoblens/foodchecker#page_with_curl-license)
 
-## Demo
+## :computer: Demo
 
 [Live demo]()
 
