@@ -81,6 +81,7 @@ If you want to know more about my process, go [here](https://github.com/lottekob
 * Bongers, C. (2021, 29 april). Detecting barcodes from the webcam. Daily Dev Tips. Geraadpleegd op 14 februari 2022, van https://daily-dev-tips.com/posts/detecting-barcodes-from-the-webcam/
 * mdn web docs. (2022c, februari 18). Fetch API - Web APIs | MDN. Geraadpleegd op 15 februari 2022, van https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
 * Open Food Facts. (z.d.). Open Food Facts - World. Geraadpleegd op 14 februari 2022, van https://world.openfoodfacts.org/
+* Routie | Javascript hash router. (z.d.). Routie. Geraadpleegd op 2 maart 2022, van http://projects.jga.me/routie/
 
 ## :page_with_curl: License
 
