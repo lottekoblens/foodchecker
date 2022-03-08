@@ -74,6 +74,7 @@ If you want to know more about my process, go [here](https://github.com/lottekob
 ## :pencil: Wishlist
 
 * When the user doens't allow you to use the camera -> create a state that gives them feedback about it and give them the option again to change that and give the camera permission. 
+* The popup 'No product found' shows up for a short time in the error state when the user types in a valid barcode. I want to fix this in the future.
 
 ## :open_file_folder: Resources
 
