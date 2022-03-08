@@ -1,6 +1,4 @@
 import { detect } from './barcode.js';
-import { handleRoutes } from './router.js';
-import { scanButton } from './ui.js';
 
 // Search for product with the value the user puts in the input field
 export const errorState = (data) => {
