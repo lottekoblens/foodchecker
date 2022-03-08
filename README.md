@@ -7,10 +7,10 @@ Entree | Scan | Product
 ![Landing page](https://github.com/lottekoblens/foodchecker/blob/main/images/home.png) |  ![Scan page](https://github.com/lottekoblens/foodchecker/blob/main/images/scan-page.png) | ![Product page](https://github.com/lottekoblens/foodchecker/blob/main/images/product.png)
 
 ## :bookmark_tabs: Table of contents
+* [Demo](https://github.com/lottekoblens/foodchecker#computer-demo)
 * [Concept](https://github.com/lottekoblens/foodchecker#bulb-concept)
 * [Features](https://github.com/lottekoblens/foodchecker#high_brightness-features)
 * [Data](https://github.com/lottekoblens/foodchecker#file_folder-data)
-* [Demo](https://github.com/lottekoblens/foodchecker#computer-demo)
 * [Assessment](https://github.com/lottekoblens/foodchecker#clipboard-assessment)
 * [Rubric](https://github.com/lottekoblens/foodchecker#clipboard-rubric)
 * [Activity diagram](https://github.com/lottekoblens/foodchecker#activity-diagram)
@@ -20,6 +20,10 @@ Entree | Scan | Product
 * [Resources](https://github.com/lottekoblens/foodchecker#open_file_folder-resources)
 * [License](https://github.com/lottekoblens/foodchecker#page_with_curl-license)
 
+## :computer: Demo
+
+[Live demo](https://lottekoblens.github.io/foodchecker/)
+
 ## :bulb: Concept
 
 This web app fits the following user story: _'As a foodie, I want to be able to scan a product while shopping so that I can read more information about the product and make a good choice whether it fits my diet.'_
@@ -28,7 +32,7 @@ So the app makes sure that the user eats things that fit their diet. They scan t
 ## :high_brightness: Features
 
 * Scan a product -> get information about that product
-* When scan doesn't work -> fill in barcode -> get information about that product
+* When scan doesn't work -> fill in barcode/ try scanning again -> get information about that product
 * When barcode is not found -> given feedback that it's not found
 
 ## :file_folder: Data 
@@ -42,10 +46,6 @@ The ${barcode} is a dynamic value. It's get from the barcode scanner or from the
 ## Activity diagram
 
 ![Activity diagram](https://github.com/lottekoblens/foodchecker/blob/main/images/activitydiagram-v2.png)
-
-## :computer: Demo
-
-[Live demo](https://lottekoblens.github.io/foodchecker/)
 
 ## :clipboard: Assessment
 
