@@ -1,12 +1,12 @@
-const h2 = document.querySelector('h2');
-const img = document.getElementById('product-image');
-const h3Ingredients = document.querySelector('h3:nth-of-type(1)');
-const h3Allergies = document.querySelector('h3:nth-of-type(2)');
-const ulAllergies = document.querySelector('ul:nth-of-type(2)');
-const ulIngredients = document.querySelector('ul:nth-of-type(1)');
-const result = document.getElementById('result');
-
 export const showProduct = (data) => {
+  const h2 = document.querySelector('h2');
+  const img = document.getElementById('product-image');
+  const h3Ingredients = document.querySelector('h3:nth-of-type(1)');
+  const h3Allergies = document.querySelector('h3:nth-of-type(2)');
+  const ulAllergies = document.querySelector('ul:nth-of-type(2)');
+  const ulIngredients = document.querySelector('ul:nth-of-type(1)');
+  const result = document.getElementById('result');
+
   result.classList.remove('moveToTop');
   result.scrollIntoView({ block: 'center', behavior: 'smooth' });
 
