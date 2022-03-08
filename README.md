@@ -69,7 +69,7 @@ The user story that I've chosen is as follows: _'As a foodie, I want to be able 
 
 ## :chart_with_upwards_trend: Process
 
-If you want to know more about my process, go [here](https://github.com/lottekoblens/foodchecker/wiki/Proces).
+If you want to know more about my process, you can read it [here](https://github.com/lottekoblens/foodchecker/wiki/Proces).
 
 ## :pencil: Wishlist
 
