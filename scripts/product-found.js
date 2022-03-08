@@ -16,6 +16,7 @@ export const showProduct = (data) => {
   } else {
     h2.innerHTML = 'Geen productnaam gevonden';
   }
+
   // image of product
   img.src = data.product.image_url;
 

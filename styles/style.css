@@ -177,3 +177,22 @@ input[type='button'] {
 .hidden {
   display: none;
 }
+
+#redLine {
+  position: absolute;
+  width: 70vmin;
+  border-bottom: 0.5em solid rgba(255, 0, 0, 0.7);
+  animation: scanning ease-in-out 2s infinite;
+}
+
+@keyframes scanning {
+  0% {
+    top: 45%;
+  }
+  50% {
+    top: 70%;
+  }
+  100% {
+    top: 45%;
+  }
+}

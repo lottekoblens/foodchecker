@@ -2,6 +2,8 @@ import { fetchWithBarcode } from './fetch.js';
 import { activateButton, loadingState } from './ui.js';
 import { removeLoadingState } from './ui.js';
 
+const scanLine = document.getElementById('redLine');
+
 export const detect = async () => {
   const barcodeDetector = new BarcodeDetector();
   let mediaStream = await navigator.mediaDevices.getUserMedia({
@@ -20,6 +22,7 @@ export const detect = async () => {
   loadingState();
   await video.play();
   removeLoadingState();
+  scanLine.classList.remove('hidden');
 
   document.getElementById('scan').append(video);
   // append the video element to the element with the id scan

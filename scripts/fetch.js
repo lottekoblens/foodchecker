@@ -6,6 +6,7 @@ import { removeLoadingState } from './ui.js';
 const popup = document.getElementById('popup');
 const button = document.getElementById('scan-button');
 const buttonContinue = document.getElementById('continue-button');
+const scanLine = document.getElementById('redLine');
 
 export const fetchWithBarcode = (barcodeValue) => {
   let barcode = barcodeValue;
@@ -13,6 +14,7 @@ export const fetchWithBarcode = (barcodeValue) => {
   fetch(`https://world.openfoodfacts.org/api/v0/product/'${barcode}.json`)
     .then((response) => response.json(), console.log(barcodeValue))
     .then((data) => {
+      scanLine.classList.add('hidden');
       if (data.status_verbose === 'product not found' || data.status_verbose === 'no code or invalid code') {
         // error state if product is not found
         removeLoadingState();
