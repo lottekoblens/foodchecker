@@ -25,7 +25,8 @@ export const detect = async () => {
 
   const render = () => {
     barcodeDetector
-      .detect(video) // the detect() returns a Promise which fulfills with an Array of detected barcodes within an image
+      .detect(video)
+      // the detect() returns a Promise which fullfills with an Array of detected barcodes within an image
       .then((barcodes) => {
         barcodes.forEach((barcode) => {
           if (!itemsFound.includes(barcode.rawValue)) {
