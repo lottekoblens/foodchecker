@@ -24,7 +24,7 @@ Entree | Scan | Product
 
 [Live demo](https://lottekoblens.github.io/foodchecker/)
 
-![Demo]()
+![Demo](https://github.com/lottekoblens/foodchecker/blob/main/images/app.gif)
 
 ## :bulb: Concept
 
