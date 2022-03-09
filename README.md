@@ -18,7 +18,7 @@ Entree | Scan | Product
 * [Process](https://github.com/lottekoblens/foodchecker#chart_with_upwards_trend-process)
 * [Wishlist](https://github.com/lottekoblens/foodchecker#pencil-wishlist)
 * [Resources](https://github.com/lottekoblens/foodchecker#open_file_folder-resources)
-* [License](https://github.com/lottekoblens/foodchecker#page_with_curl-license)
+* [License](https://github.com/lottekoblens/foodchecker#bookmark-license)
 
 ## :computer: Demo
 
@@ -77,6 +77,7 @@ There are a few things I haven't done (because of a lack of time), but I wanted 
 
 * When the user doens't allow you to use the camera -> create a state that gives them feedback about it and give them the option again to change that and give the camera permission. 
 * The popup 'No product found' shows up for a short time in the error state when the user types in a valid barcode. I want to fix this in the future.
+* The old input value stays in the input field after fetch is done, I want it to be empty after the fetch, but I haven't had enough time to fix it. So I want to do it in the future.
 
 ## :open_file_folder: Resources
 
@@ -86,6 +87,6 @@ There are a few things I haven't done (because of a lack of time), but I wanted 
 * W3 Schools. (z.d.). HTML DOM Element innerHTML Property. Geraadpleegd op 1 maart 2022, van https://www.w3schools.com/jsref/prop_html_innerhtml.asp
 * Routie | Javascript hash router. (z.d.). Routie. Geraadpleegd op 2 maart 2022, van http://projects.jga.me/routie/
 
-## :page_with_curl: License
+## :bookmark: License
 
 [MIT](https://github.com/lottekoblens/foodchecker/blob/main/LICENSE)
