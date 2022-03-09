@@ -89,4 +89,4 @@ There are a few things I haven't done (because of a lack of time), but I wanted 
 
 ## :bookmark: License
 
-[MIT](https://github.com/lottekoblens/foodchecker/blob/main/LICENSE)
+This repository has the [MIT](https://github.com/lottekoblens/foodchecker/blob/main/LICENSE) license.
