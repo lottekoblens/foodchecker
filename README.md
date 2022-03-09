@@ -77,6 +77,7 @@ There are a few things I haven't done (because of a lack of time), but I wanted 
 
 * When the user doens't allow you to use the camera -> create a state that gives them feedback about it and give them the option again to change that and give the camera permission. 
 * The popup 'No product found' shows up for a short time in the error state when the user types in a valid barcode. I want to fix this in the future.
+* The old input value stays in the input field after fetch is done, I want it to be empty after the fetch, but I haven't had enough time to fix it. So I want to do it in the future.
 
 ## :open_file_folder: Resources
 
