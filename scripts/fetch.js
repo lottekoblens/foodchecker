@@ -1,20 +1,15 @@
-import { showProduct } from './product-found.js';
+import { showProduct } from './product.js';
 import { errorState, stopErrorState } from './error.js';
-import { disableButton, emptyContent } from './ui.js';
+import { activateButton, disableButton, emptyContent, resetForm } from './ui.js';
 import { removeLoadingState } from './ui.js';
 
 export const fetchWithBarcode = (barcodeValue) => {
-  const popup = document.getElementById('popup');
-  const button = document.getElementById('scan-button');
-  const buttonContinue = document.getElementById('continue-button');
-  const invalidBarcode = document.getElementById('invalid_code');
-  const form = document.querySelector('form');
   let barcode = barcodeValue;
 
   const cors = 'https://world.openfoodfacts.org/';
   const endpoint = 'api/v0/product/';
-  const end = '.json';
-  const url = `${cors}${endpoint}${barcode}${end}`;
+  const filetype = '.json';
+  const url = `${cors}${endpoint}${barcode}${filetype}`;
   // https://world.openfoodfacts.org/api/v0/product/'${barcode}.json
   fetch(url)
     .then((response) => response.json())
@@ -24,15 +19,13 @@ export const fetchWithBarcode = (barcodeValue) => {
         removeLoadingState();
         errorState(data);
         emptyContent();
-        disableButton(); // disable buttons when product is not found
+        disableButton();
       } else {
         removeLoadingState();
         stopErrorState();
-        showProduct(data); // show data of the product
-        button.disabled = false;
-        buttonContinue.disabled = false; // let user use the buttons again so the user can scan another product
-        invalidBarcode.classList.add('hidden');
-        form.reset();
+        showProduct(data);
+        activateButton();
+        resetForm();
       }
     })
     .catch((err) => {

@@ -17,20 +17,6 @@ export const scanButton = () => {
   });
 };
 
-export const activateButton = () => {
-  const button = document.getElementById('scan-button');
-  const buttonContinue = document.getElementById('continue-button');
-  buttonContinue.disabled = false;
-  button.disabled = false;
-};
-
-export const disableButton = () => {
-  const button = document.getElementById('scan-button');
-  const buttonContinue = document.getElementById('continue-button');
-  buttonContinue.disabled = true;
-  button.disabled = true;
-};
-
 export const loadingState = () => {
   const load = document.getElementById('loading');
   load.classList.add('loading-true'); // add class loading-true to show the loading icon
@@ -54,4 +40,23 @@ export const emptyContent = () => {
   h3Ingredients.innerHTML = '';
   ulAllergies.innerHTML = '';
   ulIngredients.innerHTML = '';
+};
+
+export const activateButton = () => {
+  const button = document.getElementById('scan-button');
+  const buttonContinue = document.getElementById('continue-button');
+  buttonContinue.disabled = false;
+  button.disabled = false;
+};
+
+export const disableButton = () => {
+  const button = document.getElementById('scan-button');
+  const buttonContinue = document.getElementById('continue-button');
+  buttonContinue.disabled = true;
+  button.disabled = true;
+};
+
+export const resetForm = () => {
+  const form = document.querySelector('form');
+  form.reset(); // reset the form so the old input value is removed from the input field
 };

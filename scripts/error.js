@@ -7,7 +7,6 @@ export const errorState = (data) => {
   let inputValue = document.getElementById('searchField');
   const link = document.getElementById('again');
   const popup = document.getElementById('popup');
-  const form = document.querySelector('form');
 
   popup.classList.remove('hidden');
 
@@ -15,6 +14,8 @@ export const errorState = (data) => {
     window.location.hash = inputValue.value;
     if (data.code === null || data.status_verbose === 'product not found') {
       invalidBarcode.classList.remove('hidden');
+    } else {
+      invalidBarcode.classList.add('hidden');
     }
   });
   link.addEventListener('click', () => {
@@ -26,4 +27,12 @@ export const errorState = (data) => {
 export const stopErrorState = () => {
   const popup = document.getElementById('popup');
   popup.classList.add('hidden');
+};
+
+export const deleteInvalidText = () => {
+  // the text of product not found should be deleted after product was found
+  const invalidBarcode = document.getElementById('invalid_code');
+  if (invalidBarcode.className !== 'hidden') {
+    invalidBarcode.classList.add('hidden');
+  }
 };

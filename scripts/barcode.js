@@ -1,20 +1,24 @@
+import { deleteInvalidText } from './error.js';
 import { fetchWithBarcode } from './fetch.js';
 import { clearHash } from './router.js';
 import { activateButton, loadingState } from './ui.js';
 import { removeLoadingState } from './ui.js';
 
 export const detect = async () => {
-  clearHash();
   const scanLine = document.getElementById('redLine');
+  let itemsFound = [];
+  let barcodeValue;
+  const video = document.createElement('video'); // create a html element video
+  const divScan = document.getElementById('scan');
+
+  clearHash();
+  deleteInvalidText();
+
   const barcodeDetector = new BarcodeDetector();
   let mediaStream = await navigator.mediaDevices.getUserMedia({
     video: { facingMode: 'environment' }, // use the back camera of the phone
   });
 
-  let itemsFound = [];
-  let barcodeValue;
-
-  const video = document.createElement('video'); // create a html element video
   video.srcObject = mediaStream; // show the mediaStream in the video element
 
   loadingState();
@@ -29,13 +33,6 @@ export const detect = async () => {
     secondVideo.remove();
   }
 
-  // the text of product not found should be deleted after product was found
-  const invalidBarcode = document.getElementById('invalid_code');
-  if (invalidBarcode.className !== 'hidden') {
-    invalidBarcode.classList.add('hidden');
-  }
-
-  const divScan = document.getElementById('scan');
   divScan.append(video); // append the video element to the element with the id scan
 
   const render = () => {

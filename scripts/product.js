@@ -14,11 +14,15 @@ export const showProduct = (data) => {
   if (data.product.product_name) {
     h2.innerHTML = data.product.product_name;
   } else {
-    h2.innerHTML = 'Geen productnaam gevonden';
+    h2.innerHTML = 'No productname found';
   }
 
   // image of product
-  img.src = data.product.image_url;
+  if (data.product.image_url) {
+    img.src = data.product.image_url;
+  } else {
+    img.src = '';
+  }
 
   // ingredients of product
   if (data.product.ingredients_text_en) {
