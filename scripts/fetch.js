@@ -1,6 +1,6 @@
 import { showProduct } from './product-found.js';
-import { errorState } from './error.js';
-import { emptyContent } from './ui.js';
+import { errorState, stopErrorState } from './error.js';
+import { disableButton, emptyContent } from './ui.js';
 import { removeLoadingState } from './ui.js';
 
 export const fetchWithBarcode = (barcodeValue) => {
@@ -8,6 +8,7 @@ export const fetchWithBarcode = (barcodeValue) => {
   const button = document.getElementById('scan-button');
   const buttonContinue = document.getElementById('continue-button');
   const invalidBarcode = document.getElementById('invalid_code');
+  const form = document.querySelector('form');
   let barcode = barcodeValue;
 
   const cors = 'https://world.openfoodfacts.org/';
@@ -23,16 +24,15 @@ export const fetchWithBarcode = (barcodeValue) => {
         removeLoadingState();
         errorState(data);
         emptyContent();
-        popup.classList.remove('hidden'); // show popup so the user can search on a barcode
-        button.disabled = true;
-        buttonContinue.disabled = true; // disable buttons when product is not found
+        disableButton(); // disable buttons when product is not found
       } else {
         removeLoadingState();
-        popup.classList.add('hidden');
+        stopErrorState();
         showProduct(data); // show data of the product
         button.disabled = false;
         buttonContinue.disabled = false; // let user use the buttons again so the user can scan another product
         invalidBarcode.classList.add('hidden');
+        form.reset();
       }
     })
     .catch((err) => {

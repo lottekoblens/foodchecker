@@ -7,15 +7,23 @@ export const errorState = (data) => {
   let inputValue = document.getElementById('searchField');
   const link = document.getElementById('again');
   const popup = document.getElementById('popup');
+  const form = document.querySelector('form');
 
-  submitButton.addEventListener('click', async () => {
+  popup.classList.remove('hidden');
+
+  submitButton.addEventListener('click', () => {
     window.location.hash = inputValue.value;
     if (data.code === null || data.status_verbose === 'product not found') {
-      await invalidBarcode.classList.remove('hidden');
+      invalidBarcode.classList.remove('hidden');
     }
   });
   link.addEventListener('click', () => {
     popup.classList.add('hidden');
     detect();
   });
+};
+
+export const stopErrorState = () => {
+  const popup = document.getElementById('popup');
+  popup.classList.add('hidden');
 };

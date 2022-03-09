@@ -1,8 +1,10 @@
 import { fetchWithBarcode } from './fetch.js';
+import { clearHash } from './router.js';
 import { activateButton, loadingState } from './ui.js';
 import { removeLoadingState } from './ui.js';
 
 export const detect = async () => {
+  clearHash();
   const scanLine = document.getElementById('redLine');
   const barcodeDetector = new BarcodeDetector();
   let mediaStream = await navigator.mediaDevices.getUserMedia({

@@ -24,6 +24,13 @@ export const activateButton = () => {
   button.disabled = false;
 };
 
+export const disableButton = () => {
+  const button = document.getElementById('scan-button');
+  const buttonContinue = document.getElementById('continue-button');
+  buttonContinue.disabled = true;
+  button.disabled = true;
+};
+
 export const loadingState = () => {
   const load = document.getElementById('loading');
   load.classList.add('loading-true'); // add class loading-true to show the loading icon
