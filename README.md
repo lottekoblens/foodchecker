@@ -86,6 +86,7 @@ There are a few things I haven't done (because of a lack of time), but I wanted 
 * Open Food Facts. (z.d.). Open Food Facts - World. Geraadpleegd op 14 februari 2022, van https://world.openfoodfacts.org/
 * W3 Schools. (z.d.). HTML DOM Element innerHTML Property. Geraadpleegd op 1 maart 2022, van https://www.w3schools.com/jsref/prop_html_innerhtml.asp
 * Routie | Javascript hash router. (z.d.). Routie. Geraadpleegd op 2 maart 2022, van http://projects.jga.me/routie/
+* Java T Point. (z.d.). JavaScript reset - javatpoint. Www.Javatpoint.Com. Geraadpleegd op 9 maart 2022, van https://www.javatpoint.com/javascript-reset#:%7E:text=In%20JavaScript%2C%20the%20reset(),does%20not%20return%20any%20value.
 
 ## :bookmark: License
 
