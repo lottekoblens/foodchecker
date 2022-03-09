@@ -20,6 +20,19 @@ export const detect = async () => {
   removeLoadingState();
   scanLine.classList.remove('hidden');
 
+  // when scan is performed again after error state launched, two video's are started
+  // here I remove the second video
+  const secondVideo = document.querySelector('video:last-of-type');
+  if (secondVideo !== null) {
+    secondVideo.remove();
+  }
+
+  // the text of product not found should be deleted after product was found
+  const invalidBarcode = document.getElementById('invalid_code');
+  if (invalidBarcode.className !== 'hidden') {
+    invalidBarcode.classList.add('hidden');
+  }
+
   const divScan = document.getElementById('scan');
   divScan.append(video); // append the video element to the element with the id scan
 
