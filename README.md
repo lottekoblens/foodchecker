@@ -47,7 +47,7 @@ The ${barcode} is a dynamic value. It's get from the barcode scanner or from the
 
 ## Activity diagram
 
-![Activity diagram](https://github.com/lottekoblens/foodchecker/blob/main/images/activitydiagram-v2.png)
+![Activity diagram](https://github.com/lottekoblens/foodchecker/blob/main/images/activitydiagram-final.png)
 
 ## :clipboard: Assessment
 
